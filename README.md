@@ -33,14 +33,16 @@ Go実装は初回起動時にMySQLに繋げずに終了してしまうことが�
 
 ### EC2 AMI
 
-AWS ap-northeast-1 (東京リージョン)ami-xxxxxxxxx でEC2を起動する。
+AWS ap-northeast-1 (東京リージョン)ami-xxxxxxxxx でEC2を起動してください。
 
-- TCP port 80 (必要なら22) を適宜開放する
-- インスタンスタイプ c6i.xlarge
-  - 社内ISUCON開催時のスペック。2コアでも動作するはず
-- isucon ユーザーが存在する
-- `/home/isucon` 以下にアプリケーションが配置されている
-- Docker Compose でアプリケーション一式が起動している
+- TCP port 80 (必要ならSSH用にport 22) を開放する
+  - 初期状態で ssm-agent が起動しています
+  - 適切なインスタンスprofileを指定するとSSM Session Managerでログインできるため、sshは必須ではありません
+- インスタンスタイプの想定は c6i.xlarge です
+  - 社内ISUCON開催時のスペックです。2コアのインスタンスでも動作は可能です
+- `isucon` ユーザーが存在します
+- `/home/isucon` 以下にこのリポジトリが配置されています
+- Docker Compose でアプリケーション一式が起動しています
 
 マニュアル [docs/README.md](docs/README.md) も参照して下さい。
 
