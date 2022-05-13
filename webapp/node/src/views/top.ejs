@@ -1,0 +1,18 @@
+<div class="home">
+  <% if (loggedIn) { %>
+  <p><%= displayName %> さんこんにちは。いつもご利用ありがとうございます。</p>
+  <% } else { %>
+  <p>Listen80のご利用ははじめてですか? いますぐ<a href="/signup">サインアップ</a>しましょう!</p>
+  <% } %>
+
+  <h2>人気のプレイリスト</h2>
+
+  <div id="popular-playlists" class="playlists-container"></div>
+
+  <h2>最近追加されたプレイリスト</h2>
+
+  <div id="recent-playlists" class="playlists-container"></div>
+
+  <script src="/assets/js/lib.js" type="application/javascript"></script>
+  <script src="/assets/js/top.js" type="application/javascript"></script>
+</div>

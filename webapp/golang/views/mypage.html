@@ -1,0 +1,18 @@
+{{ template "header" . }}
+<div class="mypage-view">
+  <h2>マイページ</h2>
+  <p>{{ .DisplayName }} さんこんにちは</p>
+
+  <h3>自分のプレイリスト</h3>
+  <div class="action-box">
+    <button id="add-playlist">新規プレイリスト作成</button>
+  </div>
+  <div id="my-playlists" class="playlists-container"></div>
+
+  <h3>ラブなプレイリスト</h3>
+  <div id="fav-playlists" class="playlists-container"></div>
+
+  <script src="/assets/js/lib.js" type="application/javascript"></script>
+  <script src="/assets/js/mypage.js" type="application/javascript"></script>
+</div>
+{{ template "footer" . }}

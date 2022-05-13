@@ -1,0 +1,172 @@
+body {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px 0;
+}
+
+nav {
+  padding: 10px;
+  display: flex;
+  background: rgb(155, 225, 207);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+nav h1 {
+  font-size: 2em;
+  margin: 0 30px 0 0;
+}
+
+nav .nav-link {
+  padding: auto 0;
+}
+
+nav .nav-support {
+  text-align: right;
+  padding: auto 0;
+  flex-grow: 1;
+}
+
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+
+.signup-view, .login-view {
+  text-align: center;
+}
+
+.signup-view label,
+.login-view label {
+  text-align: right;
+  display: inline-block;
+  width: 8em;
+}
+
+.playlists-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.playlist-card {
+  border-radius: 6px;
+  width: 380px;
+  padding: 0px;
+  margin: 0px 10px 10px 0;
+}
+
+.playlist-card .playlist-card-heading{
+  padding: 10px;
+  background-color:rgb(104, 178, 12);
+  position: relative;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.playlist-card-heading h3 {
+  padding: 0em;
+  margin: 0;
+  border: 0;
+  font-size: 18px;
+}
+
+.playlist-card-heading h3 a {
+  color: #FFF;
+}
+.playlist-card-heading .love-button {
+  text-align: right;
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  color: #FFF;
+}
+
+
+
+.love-button a {
+  color: rgb(206, 206, 206);
+}
+.playlist-card-heading .love-button a {
+  color: #FFF;
+}
+
+.love-button a.fav {
+  color: rgb(218, 72, 97);
+  text-shadow: 
+    1px 1px 0px #FFF, -1px -1px 0px #FFF,
+    -1px 1px 0px #FFF,  1px -1px 0px #FFF,
+    1px 0px 0px #FFF, -1px  0px 0px #FFF,
+    0px 1px 0px #FFF,  0px -1px 0px #FFF;
+    stroke: #FFF;
+}
+
+h3 .love-button {
+  float: right;
+}
+
+.large {
+  font-size: 2em;
+}
+
+.playlist-card-body {
+  background-color:rgb(237, 242, 230);
+  font-size: 14px;
+  padding: 10px 10px 5px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.playlist-card .date {
+  font-size: 0.75em;
+  color: rgb(155, 164, 161);
+  clear: both;
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px #EEEEEE solid;
+}
+
+.playlist-card-body * label {
+  display: inline-block;
+  width: 80px;
+  text-align: right;
+}
+
+.playlist-art {
+  float: right;
+  border: 1px solid lightgray;
+  width: 64px;
+  height: 64px;
+  background-color: #EEEEEE;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16"><path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"/><path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z"/><path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"/></svg>');
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.action-box {
+  margin: 1em 0;
+}
+
+a.action-button:hover {
+  cursor: pointer;
+}
+
+@keyframes blur {
+  0% {
+    opacity: 100%;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 10%;
+    transform: scale(2);
+  }
+}
+
+.loading {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  animation: blur 0.5s infinite;
+}

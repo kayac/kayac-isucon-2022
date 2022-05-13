@@ -1,0 +1,22 @@
+<div class="login-view">
+  <h2>ログイン</h2>
+
+  <div class="flash-message" id="flash-message">
+    
+  </div>
+
+  <form id="login-form" method="post">
+    <div>
+      <label for="user_account">アカウントID:</label>
+      <input type="text" name="user_account" id="user_account" autocomplete="username">
+    </div>
+    <div>
+      <label for="password">パスワード:</label>
+      <input type="password" name="password" id="password" autocomplete="current-password">
+    </div>
+    <input type="submit" value="ログイン">
+  </form>
+  <p>アカウントがない? ほな<a href="/signup">新規登録</a>やな</p>
+
+  <script src="/assets/js/login.js" type="application/javascript"></script>
+</div>

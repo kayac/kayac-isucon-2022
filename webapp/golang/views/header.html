@@ -1,0 +1,35 @@
+{{ define "header" }}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>listen80👂 - new wave from music port</title>
+  <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
+  <link rel="stylesheet" href="/assets/css/listen80.css">
+</head>
+
+<body>
+  <nav>
+    <h1><a href="/">Listen80👂</a></h1>
+    <div class="nav-link">
+      {{ if .LoggedIn }}
+        <a href="/mypage" >マイページ</a> | 
+        id: <span id="login-account">{{ .UserAccount }}</span>
+      {{ end }}
+    </div>
+    <div class="nav-support">
+      {{ if .LoggedIn }}
+        <form id="logout-form">
+          <input type="submit" value="ログアウト" />
+        </form>
+        <script src="/assets/js/logout.js" type="application/javascript"></script>
+      {{ else }}
+        <a href="/login" >ログイン</a> | 
+        <a href="/signup" >新規登録</a>
+      {{ end }}
+
+    </div>
+  </nav>
+
+  <div id="main-app">
+{{ end }}

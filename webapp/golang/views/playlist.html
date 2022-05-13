@@ -1,0 +1,30 @@
+{{ template "header" . }}
+<div class="show-playlist">
+  <h2>プレイリストの詳細</h2>
+  <input type="hidden" id="playlist-id" name="ulid" value="{{ .Params.ulid }}" />
+
+  <div id="playlist-metadata">
+
+  </div>
+  <h3>曲のリスト</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>曲名</th>
+        <th>アーティスト名</th>
+        <th>収録アルバム</th>
+        <th>トラック番号</th>
+      </tr>
+    </thead>
+
+    <tbody id="songs-table-body">
+
+    </tbody>
+  </table>
+  
+  <script src="/assets/js/lib.js" type="application/javascript"></script>
+  <script src="/assets/js/playlist.js" type="application/javascript"></script>
+</div>
+{{ template "footer" . }}

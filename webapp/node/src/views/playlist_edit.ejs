@@ -1,0 +1,49 @@
+<div class="edit-playlist">
+  <h2>プレイリストの編集</h2>
+  <input type="hidden" id="playlist-id" name="ulid" value="<%= params.ulid %>" />
+
+  <form id="playlist-edit-form">
+    <div>
+      <label>プレイリスト名</label>
+      <input type="text" name="name" value="" id="playlist-name"/>  
+    </div>
+    <div>
+      <label>公開ステータス</label>
+      <input type="radio" name="is_public" value="true" id="public"><label for="public">公開</label></input>
+      <input type="radio" name="is_public" value="false" id="private"><label for="private">非公開</label></input>  
+    </div>
+  </form>
+
+  <h3>曲のリスト</h3>
+  <p>曲リストの編集は、保存ボタンを押すまで反映されません。  <button id="save" type="button">保存する</button>
+  </p>
+
+  <fieldset>
+    <legend>曲の追加</legend>
+    <p>先頭に追加されます。</p>
+    <select id="candidate-songs">
+    </select>
+    <button type="button" id="add-song">追加</button>
+  </fieldset>
+
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>曲名</th>
+        <th>アーティスト名</th>
+        <th>収録アルバム</th>
+        <th>トラック番号</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody id="songs-table-body">
+
+    </tbody>
+  </table>
+
+  <button id="save2" type="button">保存する</button>
+
+  <script src="/assets/js/playlist_edit.js" type="application/javascript"></script>
+</div>
