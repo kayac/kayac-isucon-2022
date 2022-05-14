@@ -45,6 +45,7 @@ AWS ap-northeast-1 (東京リージョン) ami-xxxxxxxxx でEC2を起動して�
 - TCP port 80 (必要ならSSH用にport 22) を必要に応じて開放してください
   - 初期状態で ssm-agent が起動しています
   - 適切なインスタンスprofileを指定するとSSM Session Managerでログインできるため、sshは必須ではありません
+  - SSHでログインする場合、`ubuntu` ユーザーが使用できます
 - インスタンスタイプの想定は c6i.xlarge です
   - 社内ISUCON開催時のスペックです。c6i.largeなど、2コアのインスタンスでも動作は可能です
 - 競技用に `isucon` ユーザーが存在します
