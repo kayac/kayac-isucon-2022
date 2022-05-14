@@ -30,7 +30,10 @@ $ cd webapp
 $ docker-compose up --build
 ```
 
-初期状態では Node.JS (TypeScript) 実装が起動します。Go実装に切り替える場合は [docker-compose.yml](webapp/docker-compose.yml) のコメントを参照してください。
+初期状態では Node.JS (TypeScript) 実装が起動します。
+
+- Go実装に切り替える場合は [docker-compose.yml](webapp/docker-compose.yml) のコメントを参照してください
+- M1 mac (ARM) で動作させる場合、mysqlコンテナを `image: mysql/mysql-server:8.0.28-aarch64` に変更して下さい
 
 初回起動時にはMySQLへデータを読み込むため、起動まで数分かかります。
 

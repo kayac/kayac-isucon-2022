@@ -35,6 +35,8 @@ services:
     cpus: 1
     mem_limit: 1g
     image: mysql/mysql-server:8.0.28
+    # M1 mac(ARM)の場合は aarch64 のimageに変更する
+    # image: mysql/mysql-server:8.0.28-aarch64
     environment:
       - "MYSQL_ROOT_HOST=%"
       - "MYSQL_ROOT_PASSWORD=root"
