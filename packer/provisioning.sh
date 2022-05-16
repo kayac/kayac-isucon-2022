@@ -1,13 +1,22 @@
 #!/bin/sh
 
-set -ex
+set -exu
+arch=$(uname -m)
+if [ "$arch" = "x86_64" ]; then
+	GOARCH="amd64"
+elif [ "$arch" = "aarch64" ]; then
+	GOARCH="arm64"
+else
+	echo "Unknown architecture: $arch"
+	exit 1
+fi
 
 apt-get update
 apt-get install -y docker.io mysql-client-core-8.0 git
 update-alternatives --set editor /usr/bin/vim.basic
 systemctl enable docker
 systemctl start docker
-curl -sL https://github.com/docker/compose/releases/download/v2.4.1/docker-compose-linux-x86_64 > /usr/local/bin/docker-compose
+curl -sL https://github.com/docker/compose/releases/download/v2.4.1/docker-compose-linux-${arch} > /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 
 addgroup isucon
@@ -24,7 +33,13 @@ cd /tmp/isucon
 chown -R isucon:isucon ./
 rsync -av ./ /home/isucon/
 
+cd /home/isucon/bench
+ln -s bench.$GOARCH bench
+
 cd /home/isucon/webapp
+if [ "$arch" = "aarch64" ]; then
+	perl -pi -e "s{mysql/mysql-server:8.0.28}{mysql/mysql-server:8.0.28-$arch}" docker-compose.yml
+fi
 chmod 1777 /home/isucon/webapp/mysql/logs
 docker-compose up --build -d
 set +xe
