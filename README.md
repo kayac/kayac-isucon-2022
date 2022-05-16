@@ -43,7 +43,12 @@ Go実装は、初回起動時にMySQLに接続できずに異常終了してし�
 
 ### Amazon EC2 AMI
 
-AWS ap-northeast-1 (東京リージョン) ami-xxxxxxxxx でEC2を起動してください。
+AWS ap-northeast-1 (東京リージョン) で、以下のAMIからEC2を起動してください。
+
+ AMI ID | AMI name | アーキテクチャ
+--------|------|----
+ami-06224cd9a615efa7e | kayac-isucon-2022-20220516-0209-x86_64   | X86_64
+ami-03d15acedbdf56eab | kayac-isucon-2022-20220516-0209-aarch64  | ARM64 (aarch64)
 
 - TCP port 80 (必要ならSSH用にport 22) を必要に応じて開放してください
   - 初期状態で ssm-agent が起動しています
