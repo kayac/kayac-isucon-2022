@@ -32,6 +32,9 @@ func (s *Scenario) NormalScenario(ctx context.Context, step *isucandar.Benchmark
 	defer report()
 
 	user, release := s.ChoiceUser(ctx, s.NormalUsers)
+	if user == nil {
+		return nil
+	}
 	defer release()
 	ag, _ := user.GetAgent(s.Option)
 	{
