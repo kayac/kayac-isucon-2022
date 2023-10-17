@@ -11,7 +11,7 @@ require (
 	github.com/natureglobal/realip v0.0.2
 	github.com/oklog/ulid/v2 v2.0.2
 	github.com/samber/lo v1.12.0
-	golang.org/x/net v0.0.0-20220225172249-27dd8689420f
+	golang.org/x/net v0.17.0
 )
 
 require (
