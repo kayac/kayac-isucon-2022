@@ -17,7 +17,7 @@
     "axios": "^0.26.1",
     "bcrypt": "^5.0.1",
     "cookie-session": "^2.0.0",
-    "ejs": "^3.1.6",
+    "ejs": "^3.1.7",
     "express": "^4.17.3",
     "express-mysql-session": "^2.1.7",
     "express-partials": "^0.3.0",
